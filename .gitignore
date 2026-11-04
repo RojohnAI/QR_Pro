@@ -1,0 +1,29 @@
+# Python cache and environments
+__pycache__/
+*.py[cod]
+.deps/
+.venv/
+venv/
+env/
+# Generated results and logs
+/output/
+*.log
+/TEST_RESULTS*.txt
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+build/
+dist/
+*.egg-info/
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+~$*
