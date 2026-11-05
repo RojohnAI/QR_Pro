@@ -1,0 +1,10 @@
+ПОРЯДОК ЗАПУСКА
+Выполните команды PowerShell из папки проекта:
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe main.py
+Проверка:
+.\.venv\Scripts\python.exe -m unittest -v test_qr
+Окружение создаётся один раз. Активация через Activate.ps1 не нужна.
+В пакетном режиме Enter выбирает examples/batch.txt и папку output.
+Папки окружений, кэш, логи и результаты исключены из Git через .gitignore.
