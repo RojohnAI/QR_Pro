@@ -163,9 +163,14 @@ def main():
                 text = input("Текст или URL: ")
             elif choice == "2":
                 version = input("Версия 1–40 (Enter — автоматически): ").strip()
+                size = input(f"Размер модуля 1–50 (Enter — {settings.size}): ").strip()
+                try:
+                    module_size = int(size) if size else settings.size
+                except ValueError:
+                    raise ValueError("Размер модуля должен быть целым числом от 1 до 50.") from None
                 candidate = Settings(
                     int(version) if version else None,
-                    int(input("Размер модуля 1–50: ")),
+                    module_size,
                     input("Коррекция L/M/Q/H: ").strip().upper(),
                     input("Цвет кода #RRGGBB: ").strip(),
                     input("Цвет фона #RRGGBB: ").strip())
